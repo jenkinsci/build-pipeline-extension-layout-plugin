@@ -1,6 +1,10 @@
-[Build Pipeline Plugin] Extension Layout supporting build-flow jobs
+[Build Pipeline Plugin] Extension Layout supporting build-flow jobs.
 
 =====================
+
+User Guide
+--------------------
+After installation this extension, you can see the new option ("Based on build-flow plugin layout") for the "Layout" listbox on Build Pipeline configuration page.
 
 Building the Project
 --------------------
@@ -27,6 +31,8 @@ Installing Plugin Locally
 3. Remove any installation of the build-pipeline-plugin-extension-layout in `$user.home/.jenkins/plugins/`
 4. Copy `target/build-pipeline-plugin-extension-layout.hpi` to `$user.home/.jenkins/plugins/`
 5. Start/Restart Jenkins
+
+
 
 [Build Pipeline Plugin]: https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin
 [maven]: https://maven.apache.org/
