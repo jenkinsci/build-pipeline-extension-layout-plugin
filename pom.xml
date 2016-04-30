@@ -3,9 +3,9 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.619</version>
+        <version>1.609.3</version>
     </parent>
-    <artifactId>build-pipeline-plugin-extension-layout</artifactId>
+    <artifactId>build-pipeline-extension-layout</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>Build Pipeline Layout Extension</name>
@@ -20,7 +20,7 @@
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}.git</developerConnection>
-        <url>https://github.com/jenkinsci/build-pipeline-plugin</url>
+        <url>https://github.com/jenkinsci/build-pipeline-extension-layout</url>
         <tag>HEAD</tag>
     </scm>
     <properties>
@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>build-pipeline-plugin</artifactId>
-			<version>1.5.1</version>
+			<version>1.5.2</version>
 		</dependency>
         <dependency>
             <groupId>com.cloudbees.plugins</groupId>
@@ -66,124 +66,6 @@
             <artifactId>unix4j-command</artifactId>
             <version>0.3</version>
         </dependency>
-        <!--<dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.9</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.9.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-            <version>0.6-groovy-1.8</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.codehaus.groovy</groupId>
-                    <artifactId>groovy-all</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>${groovy.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>jquery</artifactId>
-            <version>1.7.2-1</version>
-        </dependency>
-        &lt;!&ndash; Optional dependencies for using Spock &ndash;&gt;
-        <dependency>
-            &lt;!&ndash; enables mocking of classes (in addition to interfaces) &ndash;&gt;
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>2.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            &lt;!&ndash; enables mocking of classes without default constructor (together with CGLIB) &ndash;&gt;
-            <groupId>org.objenesis</groupId>
-            <artifactId>objenesis</artifactId>
-            <version>1.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            &lt;!&ndash; only necessary if Hamcrest matchers are used &ndash;&gt;
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>1.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>dashboard-view</artifactId>
-            <version>2.2</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>parameterized-trigger</artifactId>
-            <version>2.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
-            <version>${selenium.version}</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>commons-io</artifactId>
-                    <groupId>commons-io</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>${selenium.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-ie-driver</artifactId>
-            <version>${selenium.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-support</artifactId>
-            <version>${selenium.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>1.8.3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>18.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci</groupId>
-            <artifactId>test-annotations</artifactId>
-            <version>1.1</version>
-            <scope>test</scope>
-        </dependency>-->
     </dependencies>
 
 
@@ -205,43 +87,6 @@
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>1.4</version>
-                <!--$NO-MVN-MAN-VER$ -->
-                <configuration>
-                    <providerSelection>1.8</providerSelection>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.codehaus.gmaven.runtime</groupId>
-                        <artifactId>gmaven-runtime-1.8</artifactId>
-                        <version>1.4</version>
-                        <exclusions>
-                            <exclusion>
-                                <groupId>org.codehaus.groovy</groupId>
-                                <artifactId>groovy-all</artifactId>
-                            </exclusion>
-                        </exclusions>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.codehaus.groovy</groupId>
-                        <artifactId>groovy-all</artifactId>
-                        <version>${groovy.version}</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generateStubs</goal>
-                            <goal>compile</goal>
-                            <goal>generateTestStubs</goal>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
