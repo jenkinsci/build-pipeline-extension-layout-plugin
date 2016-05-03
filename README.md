@@ -26,10 +26,10 @@ Building the Project
 
 Installing Plugin Locally
 -------------------------
-1. Install [graphviz] on Linux or Windows
-2. Build the project to produce `target/build-pipeline-plugin-extension-layout.hpi`
-3. Remove any installation of the build-pipeline-plugin-extension-layout in `$user.home/.jenkins/plugins/`
-4. Copy `target/build-pipeline-plugin-extension-layout.hpi` to `$user.home/.jenkins/plugins/`
+1. Install [graphviz] on Linux or Windows and make sure the path of "dot" cmd added into the environment variable: "Path"
+2. Build the project to produce `target/build-pipeline-extension-layout.hpi`
+3. Remove any installation of the build-pipeline-extension-layout in `$user.home/.jenkins/plugins/`
+4. Copy `target/build-pipeline-extension-layout.hpi` to `$user.home/.jenkins/plugins/`
 5. Start/Restart Jenkins
 
 An Example View
