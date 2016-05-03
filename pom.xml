@@ -9,7 +9,7 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>Build Pipeline Layout Extension</name>
-    <description>This plugin provides build pipeline functionality to Hudson and Jenkins. This allows a chain of jobs to be visualised in a new view.  Manual jobs in the pipeline can be triggered by a user with the appropriate permissions manually confirming.</description>
+    <description>This plugin provides a new layout(via extension) for build pipeline.</description>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin</url>
     <licenses>
         <license>
@@ -28,9 +28,7 @@
         <checkstyle.rules.file>checkstyle_rules.xml</checkstyle.rules.file>
         <pmd.config.file>pmd_rules.xml</pmd.config.file>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <groovy.version>1.8.6</groovy.version>
-        <selenium.version>2.48.0</selenium.version>
-        <exclude.tests>**/functionaltest/*.java</exclude.tests>
+        <maven.test.skip>true</maven.test.skip>
     </properties>
     <developers>
         <developer>
@@ -40,7 +38,7 @@
             <url>http://www.centrumsystems.com.au</url>
         </developer>
         <developer>
-            <id>tangkun75</id>
+            <id>Kun Tang</id>
             <name>tangkun75</name>
             <email>tangkun75@gmail.com</email>
         </developer>
@@ -67,7 +65,6 @@
             <version>0.3</version>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
@@ -99,7 +96,6 @@
                     <violationSeverity>warning</violationSeverity>
                     <propertyExpansion>basedir=${basedir}</propertyExpansion>
                     <consoleOutput>true</consoleOutput>
-                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -150,91 +146,8 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
-                <configuration>
-                    <releaseProfiles>web-tests</releaseProfiles>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.0</version>
-                <!--$NO-MVN-MAN-VER$ -->
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.16</version>
-                <configuration>
-                    <excludes>
-                        <exclude>${exclude.tests}</exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
         </plugins>
-
-
-        <pluginManagement>
-            <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings
-                    only. It has no influence on the Maven build itself. -->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <!--<pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.jenkins-ci.tools</groupId>
-                                        <artifactId>maven-hpi-plugin</artifactId>
-                                        <versionRange>[1.7,)</versionRange>
-                                        <goals>
-                                            <goal>insert-test</goal>
-                                            <goal>resolve-test-dependencies</goal>
-                                            <goal>test-hpl</goal>
-                                            <goal>validate</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute />
-                                    </action>
-                                </pluginExecution>-->
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-resources-plugin</artifactId>
-                                        <versionRange>[2.0,)</versionRange>
-                                        <goals>
-                                            <goal>default-resources</goal>
-                                            <goal>default-test-resources</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute />
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
-
-    <profiles>
-        <profile>
-            <id>web-tests</id>
-            <properties>
-                <exclude.tests>none</exclude.tests>
-            </properties>
-        </profile>
-    </profiles>
 
     <repositories>
         <repository>
