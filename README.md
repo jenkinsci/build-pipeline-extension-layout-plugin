@@ -4,16 +4,16 @@
 
 User Guide
 --------------------
-After installation this extension, you can see the new option ("Based on build-flow plugin layout") for the "Layout" listbox on Build Pipeline configuration page.
+After installation this extension, you can see the new option ("Based on build-flow plugin layout") for the "Layout" listbox on Build Pipeline configuration page. And you have to install [graphviz] on the machine on which Jenins running.
 
 Building the Project
 --------------------
 
 ### Dependencies
-* [Apache Maven][maven] 3.0.4 or later
-* build-pipeline-plugin 1.5.1
-* build-flow-plugin 0.18
-* buildgraph-view 1.1.1
+* [Apache Maven][maven]
+* build-pipeline-plugin
+* build-flow-plugin
+* buildgraph-view
 * [graphviz]
 
 ### Targets
