@@ -32,7 +32,9 @@ Installing Plugin Locally
 4. Copy `target/build-pipeline-plugin-extension-layout.hpi` to `$user.home/.jenkins/plugins/`
 5. Start/Restart Jenkins
 
-
+An Example View
+------------------------
+![image](Example.png)
 
 [Build Pipeline Plugin]: https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin
 [maven]: https://maven.apache.org/
