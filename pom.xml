@@ -8,9 +8,9 @@
     <artifactId>build-pipeline-extension-layout</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>hpi</packaging>
-    <name>Build Pipeline Layout Extension</name>
+    <name>Build Pipeline Extension Layout</name>
     <description>This plugin provides a new layout(via extension) for build pipeline.</description>
-    <url>https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin</url>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Extension+Layout</url>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -28,7 +28,6 @@
         <checkstyle.rules.file>checkstyle_rules.xml</checkstyle.rules.file>
         <pmd.config.file>pmd_rules.xml</pmd.config.file>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.test.skip>true</maven.test.skip>
     </properties>
     <developers>
         <developer>
