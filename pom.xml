@@ -6,7 +6,7 @@
         <version>1.609.3</version>
     </parent>
     <artifactId>build-pipeline-extension-layout</artifactId>
-    <version>0.1</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>Build Pipeline Extension Layout</name>
     <description>This plugin provides a new layout(via extension) for build pipeline.</description>
